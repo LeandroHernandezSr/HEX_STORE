@@ -1,0 +1,15 @@
+rootProject.name = 'store'
+
+include(':model')
+include(':ports')
+include(':use-cases')
+include(':app-service')
+include(':driven-adapters')
+include(':entry-points')
+
+findProject(':model').projectDir=file('./domain/model')
+findProject(':ports').projectDir=file('./domain/ports')
+findProject(':use-cases').projectDir=file('./application/usecases')
+findProject(':app-service').projectDir=file('./application/appservice')
+findProject(':driven-adapters').projectDir=file('./infrastructure/drivenadapters')
+findProject(':entry-points').projectDir=file('./infrastructure/entrypoints')
